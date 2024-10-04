@@ -66,6 +66,7 @@ local_rank:
 logging_steps: 1
 xformers_attention:
 flash_attention: true
+eager_attention: true
 
 warmup_ratio: 0.1
 evals_per_epoch:

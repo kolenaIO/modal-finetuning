@@ -37,8 +37,16 @@ axolotl_image = (
 )
 
 vllm_image = (
-    modal.Image.from_registry("nvidia/cuda:12.1.0-base-ubuntu22.04", add_python="3.10")
-    .pip_install("vllm==0.5.1", "torch==2.3.0")
+    modal.Image.from_registry("nvidia/cuda:12.1.0-base-ubuntu22.04",
+                              add_python="3.10",
+                              setup_dockerfile_commands=["RUN apt update -y && apt install -y --no-install-recommends build-essential"])
+    .pip_install("vllm==0.6.2", "torch==2.4.0")
+    .pip_install("flashinfer==0.1.6", index_url="https://flashinfer.ai/whl/cu121/torch2.4/")
+    .env(
+        dict(
+            VLLM_ATTENTION_BACKEND="FLASHINFER",
+        )
+    )
     .entrypoint([])
 )
 
