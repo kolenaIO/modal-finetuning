@@ -144,7 +144,7 @@ def launch(config_raw: dict, data_raw: str, run_to_resume: str, preproc_only: bo
 def main(
     config: str,
     data: str,
-    merge_lora: bool = True,
+    merge_lora: bool = False,
     preproc_only: bool = False,
     run_to_resume: str = None,
 ):
