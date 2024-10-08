@@ -26,5 +26,10 @@ Formatting in [prep_data.py](src/prep_data.py).
 
 ### Ditch Axolotl
 Axolotl was used because it is what Modal pushed for finetuning as
-part of its tutorial. It is not required to use axolotl. It is worth seeing if the [original training code](https://github.com/kolenaIO/research/pull/168/files) can be adapted to run on Modal's serverless platform.
-Example of training without axolotl https://modal.com/docs/examples/slack-finetune
+part of its tutorial. It is not required to use axolotl. It is worth
+seeing if the [original training
+code](https://github.com/kolenaIO/research/pull/168/files) can be
+adapted to run on Modal's serverless platform. Will likely require
+updating the VLLM image definition in src/common.py.
+Example of training without
+axolotl https://modal.com/docs/examples/slack-finetune
