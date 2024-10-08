@@ -17,6 +17,8 @@ datasets:
 
 # Tokens used in input to denote option A vs B
 tokens:
+  - "[INST]"
+  - "[/INST]"
   - "[A]"
   - "[/A]"
   - "[B]"
