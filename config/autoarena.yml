@@ -1,5 +1,5 @@
 base_model: google/gemma-2-9b
-model_type: AutoModelForCausalLM
+model_type: AutoModelForSequenceClassification
 tokenizer_type: AutoTokenizer
 
 load_in_8bit: false
